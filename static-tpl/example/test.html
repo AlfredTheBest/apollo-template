@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Static Template Example</title>
+    <script src="../dist/tpl.js"></script>
+  </head>
+  <body>
+    <div id="container">
+    <% for(var i = 0; i < this.posts.length; i++) {
+        var post = this.posts[i]; %>
+        <% if(!post.expert){ %>
+            <span>post is null</span><br />
+        <% } else { %>
+            <a href="#"><% post.expert %> at <% post.time %></a><br />
+        <% } %>
+    <% } %>
+  </div>
+  </body>
+<script>
+  var data = {
+    "posts": [{
+      "expert": "content 1",
+      "time": "yesterday"
+    }, {
+      "expert": "content 2",
+      "time": "today"
+    }, {
+      "expert": "content 3",
+      "time": "tomorrow"
+    }, {
+      "expert": "",
+      "time": "eee"
+    }]
+  };
+
+  document.getElementById("container").innerHTML = staticTpl("container", data);
+
+</script>
+
+</html>
