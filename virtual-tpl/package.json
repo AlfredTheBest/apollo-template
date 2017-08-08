@@ -1,0 +1,34 @@
+{
+  "name": "virtual-tpl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "webpack",
+    "test": "NODE_ENV=dev istanbul cover ./node_modules/mocha/bin/_mocha ./test/*.spec.js -- -R spec"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "simple-virtual-dom": "^0.1.9"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-latest": "^6.24.1",
+    "art-template": "^3.0.3",
+    "chai": "^3.4.1",
+    "codecov.io": "^0.1.6",
+    "eslint": "^2.2.0",
+    "jsdom": "^7.0.2",
+    "mocha": "^2.3.4",
+    "mocha-jsdom": "^1.0.0",
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0",
+    "webpack": "^3.4.1"
+  }
+}
